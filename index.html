@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kned, coder</title>
+<meta name="description" content="kned writes software with Node.js, Lua and Python. 62+ projects shipped.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://kned.me/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kned, coder">
+<meta property="og:description" content="kned writes software with Node.js, Lua and Python. 62+ projects shipped.">
+<meta property="og:url" content="https://kned.me/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    var saved = null;
+    try { saved = localStorage.getItem('kned-theme'); } catch (e) {}
+    var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    root.setAttribute('data-theme', saved || (prefersLight ? 'light' : 'dark'));
+  })();
+</script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="wordmark" href="#top">kned<span class="accent">.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="#work">work</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-toggle-label">theme</span>
+      <span class="theme-toggle-value" id="theme-value">dark</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker mono">node.js, lua, python</p>
+        <h1 id="hero-title">kned<span class="accent caret">.</span></h1>
+        <p class="lead">I write code in Node.js, Lua and Python. 62+ projects shipped, and this page is where they get written up.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#work">See the work index</a>
+          <a class="btn btn-quiet" href="mailto:escsyntax@gmail.com">Email me</a>
+        </div>
+      </div>
+
+      <dl class="spec mono" aria-label="Spec sheet">
+        <dt>name</dt>
+        <dd>kned</dd>
+        <dt>stack</dt>
+        <dd>Node.js, Lua, Python</dd>
+        <dt>shipped</dt>
+        <dd><span class="spec-big">62+</span> projects</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap section-grid">
+      <p class="gutter mono" aria-hidden="true">01</p>
+      <div class="section-body">
+        <h2 id="work-title">Work index</h2>
+        <p class="section-note">62+ projects shipped. The slots below stay marked as placeholders until each write-up lands.</p>
+
+        <ol class="index">
+          <li class="index-row">
+            <span class="index-no mono">01</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+          <li class="index-row">
+            <span class="index-no mono">02</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+          <li class="index-row">
+            <span class="index-no mono">03</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+          <li class="index-row">
+            <span class="index-no mono">04</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+          <li class="index-row">
+            <span class="index-no mono">05</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+          <li class="index-row">
+            <span class="index-no mono">06</span>
+            <span class="index-title placeholder">[project name]</span>
+            <span class="index-meta mono placeholder">[stack]</span>
+            <span class="index-state mono">pending</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack" aria-labelledby="stack-title">
+    <div class="wrap section-grid">
+      <p class="gutter mono" aria-hidden="true">02</p>
+      <div class="section-body">
+        <h2 id="stack-title">Stack</h2>
+        <p class="section-note">The three languages I work in.</p>
+
+        <ul class="stack">
+          <li class="stack-row">
+            <span class="stack-name">Node.js</span>
+            <span class="stack-desc">JavaScript runtime for servers, command line tools and build scripts.</span>
+          </li>
+          <li class="stack-row">
+            <span class="stack-name">Lua</span>
+            <span class="stack-desc">Small language built to be embedded, used in games and scriptable tools.</span>
+          </li>
+          <li class="stack-row">
+            <span class="stack-name">Python</span>
+            <span class="stack-desc">General purpose language for scripts, automation and data work.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap section-grid">
+      <p class="gutter mono" aria-hidden="true">03</p>
+      <div class="section-body">
+        <h2 id="contact-title">Contact</h2>
+        <p class="section-note">Email or GitHub.</p>
+        <a class="contact-link" href="mailto:escsyntax@gmail.com">escsyntax@gmail.com</a>
+        <p class="contact-meta mono">
+          <a class="contact-alt" href="https://github.com/escsyntax-sudo">github.com/escsyntax-sudo</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner mono">
+    <span>kned, <span id="year">2026</span></span>
+    <span>hand written html, css, js</span>
+    <a href="#top">back to top</a>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>
