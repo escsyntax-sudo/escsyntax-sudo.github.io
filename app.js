@@ -56,6 +56,63 @@
 
   paintLabel();
 
+  // Project rows: hover previews on pointer devices, click or tap pins the panel open.
+  var projects = Array.prototype.slice.call(document.querySelectorAll('.project'));
+  var hoverPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  function setProject(project, open) {
+    var button = project.querySelector('.project-row');
+    var panel = project.querySelector('.project-panel');
+    var cue = project.querySelector('.project-cue');
+    project.setAttribute('data-open', open ? 'true' : 'false');
+    if (button) button.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (panel) panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (cue) cue.textContent = open ? 'close' : 'detail';
+  }
+
+  var projectControllers = projects.map(function (project) {
+    var button = project.querySelector('.project-row');
+    var pinned = false;
+
+    var controller = {
+      close: function () {
+        pinned = false;
+        setProject(project, false);
+      },
+      open: function () {
+        pinned = true;
+        projectControllers.forEach(function (other) {
+          if (other !== controller) other.close();
+        });
+        setProject(project, true);
+      },
+    };
+
+    if (button) {
+      button.addEventListener('click', function () {
+        if (project.getAttribute('data-open') === 'true' && pinned) controller.close();
+        else controller.open();
+      });
+    }
+
+    project.addEventListener('mouseenter', function () {
+      if (hoverPointer.matches && !pinned) setProject(project, true);
+    });
+
+    project.addEventListener('mouseleave', function () {
+      if (hoverPointer.matches && !pinned) setProject(project, false);
+    });
+
+    return controller;
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+    projectControllers.forEach(function (controller) {
+      controller.close();
+    });
+  });
+
   // Section reveal: each section arrives once, in reading order.
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var groups = Array.prototype.slice.call(document.querySelectorAll('.section-body'));
@@ -68,7 +125,7 @@
         item.style.setProperty('--reveal-delay', index * 70 + 'ms');
       });
 
-      var rows = group.querySelectorAll('.index-row, .stack-row');
+      var rows = group.querySelectorAll('.project, .stack-row');
       Array.prototype.forEach.call(rows, function (row, index) {
         row.classList.add('reveal-item');
         row.style.setProperty('--reveal-delay', 120 + index * 45 + 'ms');

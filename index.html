@@ -77,47 +77,91 @@
       <p class="gutter mono" aria-hidden="true">01</p>
       <div class="section-body">
         <h2 id="work-title">Work index</h2>
-        <p class="section-note">62+ projects shipped. The slots below stay marked as placeholders until each write-up lands.</p>
+        <p class="section-note">Six of 62+. Open a row for the short version.</p>
 
         <ol class="index">
-          <!-- To turn a slot into a real entry: swap [project name] and [stack] for the real
-               values, wrap the title in an <a href="...">, and change the state text to the
-               real status (for example "live", "archived", "private"). Delete unused rows. -->
-          <li class="index-row">
-            <span class="index-no mono">01</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-1" id="project-1-btn">
+              <span class="index-no mono">01</span>
+              <span class="project-title">NAS<span class="project-sub">Neovim Active Statusline</span></span>
+              <span class="project-lang mono">lua</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-1" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A lightweight Lua module for Neovim that tracks live session metrics (lines edited, active language, git status, error counts) and renders a minimal statusline without slowing startup.</p>
+              </div>
+            </div>
           </li>
-          <li class="index-row">
-            <span class="index-no mono">02</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-2" id="project-2-btn">
+              <span class="index-no mono">02</span>
+              <span class="project-title">PAM<span class="project-sub">Pathfinding and Alignment Module</span></span>
+              <span class="project-lang mono">lua</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-2" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A decoupled 2D grid pathfinding library for LÖVE2D, built on A* search with spatial hashing to keep NPC pathing and collision fast across large tilemaps.</p>
+              </div>
+            </div>
           </li>
-          <li class="index-row">
-            <span class="index-no mono">03</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-3" id="project-3-btn">
+              <span class="index-no mono">03</span>
+              <span class="project-title">LID<span class="project-sub">Local Index and Documentation</span></span>
+              <span class="project-lang mono">python</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-3" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A CLI that parses local Markdown and PDF documentation, builds local vector embeddings, and answers plain language questions about it offline.</p>
+              </div>
+            </div>
           </li>
-          <li class="index-row">
-            <span class="index-no mono">04</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-4" id="project-4-btn">
+              <span class="index-no mono">04</span>
+              <span class="project-title">MOG<span class="project-sub">Mock OpenAPI Generator</span></span>
+              <span class="project-lang mono">python</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-4" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A CLI that reads OpenAPI or Swagger files and raw JSON payloads, then starts a lightweight mock server that returns dynamic fake data.</p>
+              </div>
+            </div>
           </li>
-          <li class="index-row">
-            <span class="index-no mono">05</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-5" id="project-5-btn">
+              <span class="index-no mono">05</span>
+              <span class="project-title">RBI<span class="project-sub">Repository Debt Inspector</span></span>
+              <span class="project-lang mono">node.js</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-5" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A CLI that uses the GitHub API to scan organizations for stale branches and pull requests past their SLA, then exports a structured Markdown report.</p>
+              </div>
+            </div>
           </li>
-          <li class="index-row">
-            <span class="index-no mono">06</span>
-            <span class="index-title placeholder">[project name]</span>
-            <span class="index-meta mono placeholder">[stack]</span>
-            <span class="index-state mono">pending</span>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-6" id="project-6-btn">
+              <span class="index-no mono">06</span>
+              <span class="project-title">WIP<span class="project-sub">Webhook Inspector Proxy</span></span>
+              <span class="project-lang mono">node.js</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-6" aria-hidden="true">
+              <div class="project-panel-inner">
+                <p class="project-desc">A local proxy built with Fastify and WebSockets that catches incoming webhooks, streams raw payloads to a terminal UI, and replays past webhooks on demand.</p>
+              </div>
+            </div>
           </li>
         </ol>
       </div>
