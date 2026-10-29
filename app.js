@@ -77,6 +77,11 @@
     var controller = {
       close: function () {
         pinned = false;
+        // Keep keyboard focus on solid ground: a link inside the panel is hidden when it shuts.
+        var panel = project.querySelector('.project-panel');
+        if (panel && panel.contains(document.activeElement)) {
+          if (button) button.focus();
+        }
         setProject(project, false);
       },
       open: function () {

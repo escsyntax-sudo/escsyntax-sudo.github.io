@@ -56,9 +56,10 @@ Reason for amber: it is the one warm signal in a cool neutral field, so a single
 - The mono spec sheet in the hero (name, stack, shipped) instead of a statistics strip.
 - The trailing period after the wordmark, in accent.
 - Work rows open a short description panel: on a hover device the panel previews as the pointer passes, and a click or tap pins it open. The row is a real button with `aria-expanded`, so keyboard users get the same content.
+- Each panel carries its own source link to the public repository, with the licence tag beside it. One link per panel, not a separate list of links, so the row and its source stay together.
 
 ## Content rules for this site
 
 - 62+ projects is owner-supplied and may be stated. No other numbers, no testimonials, no client logos, no availability claims.
-- Project names and descriptions come from the owner. Do not invent projects, links, or claims about them.
+- Project names, descriptions, repository URLs and licences come from the owner's public GitHub (`github.com/escsyntax-sudo`), read from each README. Do not invent projects, links or claims about them.
 - The wordmark is the name set in type. No avatar or logo is invented.

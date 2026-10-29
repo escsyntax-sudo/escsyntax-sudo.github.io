@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css?v=3">
+<link rel="stylesheet" href="./styles.css?v=4">
 <script>
   (function () {
     var root = document.documentElement;
@@ -68,6 +68,8 @@
         <dd>Node.js, Lua, Python</dd>
         <dt>shipped</dt>
         <dd><span class="spec-big">62+</span> projects</dd>
+        <dt>github</dt>
+        <dd><a class="spec-link" href="https://github.com/escsyntax-sudo">escsyntax-sudo</a></dd>
       </dl>
     </div>
   </section>
@@ -77,7 +79,7 @@
       <p class="gutter mono" aria-hidden="true">01</p>
       <div class="section-body">
         <h2 id="work-title">Work index</h2>
-        <p class="section-note">Six of 62+. Open a row for the short version.</p>
+        <p class="section-note">Six of 62+. Open a row for the short version and its repo.</p>
 
         <ol class="index">
           <li class="project" data-open="false">
@@ -89,7 +91,13 @@
             </button>
             <div class="project-panel" id="project-1" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A lightweight Lua module for Neovim that tracks live session metrics (lines edited, active language, git status, error counts) and renders a minimal statusline without slowing startup.</p>
+                <div class="project-card">
+                  <p class="project-desc">A lightweight Lua module for Neovim that reports mode, git branch, edits made since the file opened, filetype, diagnostics and cursor position in one statusline. Requiring it does no work: git runs asynchronously and diagnostics come from a cache, so startup is untouched.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/nas.nvim">github.com/escsyntax-sudo/nas.nvim</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -103,7 +111,13 @@
             </button>
             <div class="project-panel" id="project-2" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A decoupled 2D grid pathfinding library for LÖVE2D, built on A* search with spatial hashing to keep NPC pathing and collision fast across large tilemaps.</p>
+                <div class="project-card">
+                  <p class="project-desc">A 2D grid pathfinding and alignment library for LÖVE2D: A* over a rectangular grid with a binary heap, weighted cells, diagonal movement and a spatial hash for broad phase collision queries. The core is plain Lua with no LÖVE import, so it also runs in a test harness or on a server.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/pam.lua">github.com/escsyntax-sudo/pam.lua</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -117,7 +131,13 @@
             </button>
             <div class="project-panel" id="project-3" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A CLI that parses local Markdown and PDF documentation, builds local vector embeddings, and answers plain language questions about it offline.</p>
+                <div class="project-card">
+                  <p class="project-desc">A CLI that indexes Markdown, text, reStructuredText and PDF files, builds local vector embeddings and answers natural language queries without a network connection. No API keys and no model downloads: the index is a single SQLite file.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/lid">github.com/escsyntax-sudo/lid</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -131,7 +151,13 @@
             </button>
             <div class="project-panel" id="project-4" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A CLI that reads OpenAPI or Swagger files and raw JSON payloads, then starts a lightweight mock server that returns dynamic fake data.</p>
+                <div class="project-card">
+                  <p class="project-desc">A CLI that reads an OpenAPI 3 or Swagger 2 document, or a plain JSON payload, and starts a small HTTP server that answers requests with generated data. One Python package on a standard library server, with no config files or database.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/mog">github.com/escsyntax-sudo/mog</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -145,7 +171,13 @@
             </button>
             <div class="project-panel" id="project-5" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A CLI that uses the GitHub API to scan organizations for stale branches and pull requests past their SLA, then exports a structured Markdown report.</p>
+                <div class="project-card">
+                  <p class="project-desc">A CLI that uses the GitHub REST API to find branches and open pull requests past their SLA, then writes a Markdown report you can keep next to the repository or post in a weekly issue. No config files, no database, no service to run.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/rbi">github.com/escsyntax-sudo/rbi</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -159,7 +191,13 @@
             </button>
             <div class="project-panel" id="project-6" aria-hidden="true">
               <div class="project-panel-inner">
-                <p class="project-desc">A local proxy built with Fastify and WebSockets that catches incoming webhooks, streams raw payloads to a terminal UI, and replays past webhooks on demand.</p>
+                <div class="project-card">
+                  <p class="project-desc">A local proxy built with Fastify and WebSockets that catches incoming webhooks, streams raw payloads to a terminal UI and replays past events to your real handler. Everything runs on your machine and needs no account.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/wip">github.com/escsyntax-sudo/wip</a>
+                    <span class="project-license">mit</span>
+                  </p>
+                </div>
               </div>
             </div>
           </li>
@@ -217,6 +255,6 @@
   </div>
 </footer>
 
-<script src="./app.js?v=3"></script>
+<script src="./app.js?v=4"></script>
 </body>
 </html>
