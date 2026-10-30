@@ -79,7 +79,7 @@
       <p class="gutter mono" aria-hidden="true">01</p>
       <div class="section-body">
         <h2 id="work-title">Work index</h2>
-        <p class="section-note">Six of 62+. Open a row for the short version and its repo.</p>
+        <p class="section-note">Nine of 62+. Open a row for the short version and its repo.</p>
 
         <ol class="index">
           <li class="project" data-open="false">
@@ -196,6 +196,63 @@
                   <p class="project-source mono">
                     <a class="project-repo" href="https://github.com/escsyntax-sudo/wip">github.com/escsyntax-sudo/wip</a>
                     <span class="project-license">mit</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-7" id="project-7-btn">
+              <span class="index-no mono">07</span>
+              <span class="project-title">AMP<span class="project-sub">Audio Pipeline</span></span>
+              <span class="project-lang mono">node.js</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-7" aria-hidden="true">
+              <div class="project-panel-inner">
+                <div class="project-card">
+                  <p class="project-desc">An audio processing and transcription engine: a Fastify API takes chunked uploads, authenticates users and queues jobs, while Python workers run faster-whisper and speaker diarization and publish progress over Redis Pub/Sub. BullMQ is the transport between the two languages, and no audio leaves the host.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/amp-audio-pipeline">github.com/escsyntax-sudo/amp-audio-pipeline</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-8" id="project-8-btn">
+              <span class="index-no mono">08</span>
+              <span class="project-title">SMM<span class="project-sub">Market Monitor</span></span>
+              <span class="project-lang mono">node.js</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-8" aria-hidden="true">
+              <div class="project-panel-inner">
+                <div class="project-card">
+                  <p class="project-desc">A market monitoring stack with a Node.js gateway and a Python analytics engine. The gateway aggregates ticks into rolling OHLC bars and broadcasts updates over WebSocket, while the engine serves RSI, Bollinger Bands, moving averages and a linear regression forecast over gRPC. The bundled demo feed is synthetic, not live market data.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/smm-market-monitor">github.com/escsyntax-sudo/smm-market-monitor</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project" data-open="false">
+            <button class="project-row" type="button" aria-expanded="false" aria-controls="project-9" id="project-9-btn">
+              <span class="index-no mono">09</span>
+              <span class="project-title">DOC<span class="project-sub">Vector Gateway</span></span>
+              <span class="project-lang mono">node.js</span>
+              <span class="project-cue mono" aria-hidden="true">detail</span>
+            </button>
+            <div class="project-panel" id="project-9" aria-hidden="true">
+              <div class="project-panel-inner">
+                <div class="project-card">
+                  <p class="project-desc">A multi-tenant document gateway: Fastify owns auth, uploads, job state and SQLite, while a FastAPI service handles parsing, chunking and embeddings. Tenant data exports as JSONL to local storage or S3, and CRM webhooks are verified and failed jobs retried on a CRON schedule.</p>
+                  <p class="project-source mono">
+                    <a class="project-repo" href="https://github.com/escsyntax-sudo/doc-vector-gateway">github.com/escsyntax-sudo/doc-vector-gateway</a>
                   </p>
                 </div>
               </div>
